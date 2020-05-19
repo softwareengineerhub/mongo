@@ -38,8 +38,8 @@ public class Utils {
         CodecRegistry codecRegistry = getCodecRegistry(modelPackage);
         MongoClientOptions.Builder options = new MongoClientOptions.Builder().codecRegistry(codecRegistry);
 
-        String mongodbURI = "mongodb+srv://user:userpwd@cluster0-daeju.mongodb.net/test?retryWrites=true&w=majority";
-        MongoClientURI uri = new MongoClientURI(mongodbURI, options);
+        //String mongodbURI = "mongodb+srv://user:userpwd@cluster0-daeju.mongodb.net/test?retryWrites=true&w=majority";
+        MongoClientURI uri = new MongoClientURI(serverUrl, options);
         return new MongoClient(uri);
     }
 }
